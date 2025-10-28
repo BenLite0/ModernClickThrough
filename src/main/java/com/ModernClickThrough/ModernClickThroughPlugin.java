@@ -100,9 +100,34 @@ public class ModernClickThroughPlugin extends Plugin
 	private void toggleClickThrough(int widgetId, boolean enable)
 	{
 		Widget widget = client.getWidget(widgetId);
-		if (widget != null)
+		if (widget == null)
 		{
-			widget.setNoClickThrough(!enable);
+			log.debug("toggleClickThrough: widget {} was null", widgetId);
+			return;
+
+		}
+		widget.setNoClickThrough(!enable);
+		//chatgpt fix ty
+		setScrollBlockingRecursively(widget, true);
+	}
+
+	//chatgpt wrote this
+	private void setScrollBlockingRecursively(Widget w, boolean block)
+	{
+		if (w == null)
+		{
+			return;
+		}
+
+		w.setNoScrollThrough(block);
+
+		Widget[] children = w.getChildren();
+		if (children != null)
+		{
+			for (Widget child : children)
+			{
+				setScrollBlockingRecursively(child, block);
+			}
 		}
 	}
 }
