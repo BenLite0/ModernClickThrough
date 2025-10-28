@@ -1,4 +1,4 @@
-package com.ModernClickThrough;
+package com.modernclickthrough;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;

@@ -52,5 +52,5 @@
 		<appender-ref ref="STDOUT"/>
 		<appender-ref ref="FILE"/>
 	</root>
-	<logger name="com.ModernClickThrough" level="DEBUG" />
+	<logger name="com.modernclickthrough" level="DEBUG" />
 </configuration>
