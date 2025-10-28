@@ -1,4 +1,4 @@
-package com.modernclickthrough;
+package com.ModernClickThrough;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;

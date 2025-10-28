@@ -1,10 +1,10 @@
-package com.modernclickthrough;
+package com.ModernClickThrough;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("modernclickthrough")
+@ConfigGroup("ModernClickThrough")
 public interface ModernClickThroughConfig extends Config
 {
 	@ConfigItem(
